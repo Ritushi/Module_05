@@ -1,0 +1,25 @@
+package LECTURE9;
+
+public class RecursionPrint2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LexicoCounting(0,34);
+	}
+  
+  public static void LexicoCounting(int curr, int end) {
+      if(curr>end) {
+    	  return;
+      }
+		
+       System.out.println(curr);
+		int i=0;
+		if(curr==0) {
+			i=1;
+		}
+		while(i<=9) {
+			LexicoCounting(curr*10+i,end);
+			i++;
+		}
+	}
+  }
